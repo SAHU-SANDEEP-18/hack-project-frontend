@@ -26,5 +26,6 @@ export const listInvoicesApi = (params = {}) => {
 };
 
 export const downloadInvoicePdfUrl = (id) => {
-  return `/api/invoices/${id}/pdf`;
+  const baseUrl = import.meta.env.VITE_API_BASE_URL || 'https://hack-project-backend.onrender.com/api';
+  return `${baseUrl}/invoices/${id}/pdf`;
 };
